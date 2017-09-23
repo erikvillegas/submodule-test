@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06730B67A9DE26D538750C73 /* Pods_SomeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BDE41193AC9CFAAA997A19 /* Pods_SomeFramework.framework */; };
 		159583301F771694000D05F5 /* SomeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159583261F771694000D05F5 /* SomeFramework.framework */; };
 		159583351F771694000D05F5 /* SomeFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159583341F771694000D05F5 /* SomeFrameworkTests.swift */; };
 		159583371F771694000D05F5 /* SomeFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 159583291F771694000D05F5 /* SomeFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		159583421F771771000D05F5 /* SomeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159583411F771771000D05F5 /* SomeClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,10 @@
 		1595832F1F771694000D05F5 /* SomeFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SomeFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		159583341F771694000D05F5 /* SomeFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeFrameworkTests.swift; sourceTree = "<group>"; };
 		159583361F771694000D05F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		159583411F771771000D05F5 /* SomeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeClass.swift; sourceTree = "<group>"; };
+		82BDE41193AC9CFAAA997A19 /* Pods_SomeFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SomeFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0478E4FB4C6E4B158DE272A /* Pods-SomeFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-SomeFramework/Pods-SomeFramework.release.xcconfig"; sourceTree = "<group>"; };
+		E37195B7E0E83559051F825A /* Pods-SomeFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SomeFramework/Pods-SomeFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06730B67A9DE26D538750C73 /* Pods_SomeFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 				159583281F771694000D05F5 /* SomeFramework */,
 				159583331F771694000D05F5 /* SomeFrameworkTests */,
 				159583271F771694000D05F5 /* Products */,
+				4CD0618D7A95138D4647D3B4 /* Pods */,
+				328D750565434AEF20010286 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +82,7 @@
 			children = (
 				159583291F771694000D05F5 /* SomeFramework.h */,
 				1595832A1F771694000D05F5 /* Info.plist */,
+				159583411F771771000D05F5 /* SomeClass.swift */,
 			);
 			path = SomeFramework;
 			sourceTree = "<group>";
@@ -84,6 +94,23 @@
 				159583361F771694000D05F5 /* Info.plist */,
 			);
 			path = SomeFrameworkTests;
+			sourceTree = "<group>";
+		};
+		328D750565434AEF20010286 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82BDE41193AC9CFAAA997A19 /* Pods_SomeFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CD0618D7A95138D4647D3B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E37195B7E0E83559051F825A /* Pods-SomeFramework.debug.xcconfig */,
+				E0478E4FB4C6E4B158DE272A /* Pods-SomeFramework.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1595833A1F771694000D05F5 /* Build configuration list for PBXNativeTarget "SomeFramework" */;
 			buildPhases = (
+				F98F937BA242CC48BD5D0F3C /* [CP] Check Pods Manifest.lock */,
 				159583211F771694000D05F5 /* Sources */,
 				159583221F771694000D05F5 /* Frameworks */,
 				159583231F771694000D05F5 /* Headers */,
 				159583241F771694000D05F5 /* Resources */,
+				DCE2BD3FF13811D0C2FCBF47 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +177,7 @@
 				TargetAttributes = {
 					159583251F771694000D05F5 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					1595832E1F771694000D05F5 = {
@@ -191,11 +221,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DCE2BD3FF13811D0C2FCBF47 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SomeFramework/Pods-SomeFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F98F937BA242CC48BD5D0F3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SomeFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		159583211F771694000D05F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159583421F771771000D05F5 /* SomeClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +400,9 @@
 		};
 		1595833B1F771694000D05F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37195B7E0E83559051F825A /* Pods-SomeFramework.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carvana.SomeFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,7 +423,9 @@
 		};
 		1595833C1F771694000D05F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0478E4FB4C6E4B158DE272A /* Pods-SomeFramework.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +446,7 @@
 		1595833E1F771694000D05F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SomeFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +460,7 @@
 		1595833F1F771694000D05F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SomeFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
